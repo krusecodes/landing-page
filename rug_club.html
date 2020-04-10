@@ -10,7 +10,12 @@
   <link rel="shortcut icon" href="/favicon.ico" />
 
   <style>
-      @import url(https://use.typekit.net/yjz3jaa.css);      
+      @import url(https://use.typekit.net/yjz3jaa.css);
+
+      @font-face {
+          font-family: Sofia Pro;
+          src: url(./assets/sofiapro-light.otf);
+      }      
       
       html,
       body {
@@ -87,7 +92,7 @@
       }
 
       .MemberJoin .headerSection .title {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 60px;
           font-weight: bold;
           font-style: normal;
@@ -99,19 +104,19 @@
       
       .MemberJoin .aboutSection > .title,
       .MemberJoin .fbSection .title {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 48px;
           font-weight: bold;
           font-style: normal;
           font-stretch: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #1a1818;
+          color: #1d354a;
       }
       
       .MemberJoin .benefitsSection .title,
       .MemberJoin .applySection .left .title {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 34px;
           font-weight: bold;
           font-style: normal;
@@ -123,18 +128,18 @@
       
       .MemberJoin .headerSection .subtitle,
       .MemberJoin .aboutSection > .left > .subtitle {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 24px;
           font-weight: bold;
           font-style: normal;
           font-stretch: normal;
           line-height: normal;
           letter-spacing: normal;
-          color: #1a1818;
+          color: #1d354a;
       }
       
       .MemberJoin .benefitsSection .left .listItem .header {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 16px;
           font-weight: bold;
           font-style: normal;
@@ -152,8 +157,8 @@
       .MemberJoin .benefitsSection .right .listItem .itemText,
       .MemberJoin .applySection .left .description,
       .MemberJoin .fbSection .description {
-          font-family: "proxima-nova", sans-serif;
-          font-size: 16px;
+          font-family: "Sofia Pro";
+          font-size: 18px;
           font-weight: normal;
           font-style: normal;
           font-stretch: normal;
@@ -163,7 +168,7 @@
       }
       
       .MemberJoin .copyrightSection {
-          font-family: "proxima-nova", sans-serif;
+          font-family: "Sofia Pro";
           font-size: 14px;
           font-weight: normal;
           font-style: normal;
@@ -261,7 +266,7 @@
           padding: 20px;
           border-radius: 6px;
           text-align: center;
-          background: rgba(56, 69, 104, 0.9);
+          background: rgba(250, 250, 250, 0.502);
           box-shadow: 0px 16px 34px rgba(48, 53, 57, 0.25);
       }
       
@@ -285,12 +290,12 @@
       
       .MemberJoin .aboutSection > .title {
           margin-bottom: 120px;
-          color: #2e426d;
+          color: #1d354a;
       }
       
       .MemberJoin .aboutSection > .left > .subtitle {
           margin-bottom: 40px;
-          color: #2e426d;
+          color: #1d354a;
       }
       
       .MemberJoin .aboutSection > .left > .description {
@@ -340,7 +345,7 @@
           flex: 1;
           padding: 60px 80px;
           background-color: #2e426d;
-          background-image: url(https://i.imgur.com/4fsETVq.jpg);
+          background-image: url('./assets/benefits_left.png');
           background-size: cover;
           background-position: center 10%;
           background-repeat: no-repeat;
@@ -369,7 +374,7 @@
       }
       
       .MemberJoin .benefitsSection .left .listItem .icon * {
-          fill: #7fd4f4 !important;
+          fill: #fafafa !important;
       }
       
       .MemberJoin .benefitsSection .left .listItem .text {
@@ -378,7 +383,7 @@
       }
       
       .MemberJoin .benefitsSection .left .listItem .header {
-          color: #7fd4f4;
+          color: #fafafa;
           margin-bottom: 8px;
       }
       
@@ -392,7 +397,7 @@
           flex: 1;
           padding: 60px 80px;
           background-color: #e9e8ea;
-          background-image: url(https://i.imgur.com/unm73qZ.jpg);
+          background-image: url('./assets/benefits_right.png');
           background-size: cover;
           background-position: center 10%;
           background-repeat: no-repeat;
@@ -451,10 +456,10 @@
               font-size: 34px;
           }
           .MemberJoin .benefitsSection .left {
-              background-image: url(https://i.imgur.com/kagvQBZ.jpg);
+              background-image: url('./assets/benefits_left.png');
           }
           .MemberJoin .benefitsSection .right {
-              background-image: url(https://i.imgur.com/0b2UneB.jpg);
+              background-image: url('./assets/benefits_right.png');
           }
           .MemberJoin .benefitsSection .left,
           .MemberJoin .benefitsSection .right {
@@ -621,16 +626,16 @@
       }
       
       .Button:hover.primary {
-          background-color: #4fa7ee;
+          background-color: #ffcd28e2;
       }
       
       .Button:active.primary {
-          background-color: #3996e0;
+          background-color: #ffce28;
       }
       
       .Button.primary {
           color: white;
-          background-color: #3996e0;
+          background-color: #ffce28;
           border: none;
       }
       
@@ -712,7 +717,6 @@
                         </div>
                         <div class="text">
                             <div class="header">Eager to learn more about Ruggable</div>
-                            <div class="itemText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
                         </div>
                     </div>
                     <div class="listItem">
@@ -723,7 +727,6 @@
                         </div>
                         <div class="text">
                             <div class="header">Active on social media</div>
-                            <div class="itemText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
                         </div>
                     </div>
                     <div class="listItem">
@@ -734,7 +737,6 @@
                         </div>
                         <div class="text">
                             <div class="header">Knowledgeable on Ruggable basics - how to assemble rugs, washing instructions, and familiar with our brand voice</div>
-                            <div class="itemText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
                         </div>
                     </div>
                     <div class="listItem">
@@ -746,13 +748,13 @@
                         </div>
                         <div class="text">
                             <div class="header">True believers in our rugs!</div>
-                            <div class="itemText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
                         </div>
                     </div>
                 </div>
                 <div class="right">
                     <div class="title">What you&#x27;ll get</div>
-                    <!-- <div class="description">Subtitle for what your community gets:</div> -->
+                    <div class="description"></div>
+                    <!-- <div></div> -->
                     <div class="listItem">
                         <div class="icon"></div>
                         <div class="itemText">Sneak peeks and early access to new collections and launches</div>
@@ -771,7 +773,7 @@
                 <div class="left">
                     <div>
                         <div class="title">Join our community today!</div>
-                        <div class="description">We would love for you to consider joining our family. Our goal is to create a better way to communicate and learn from our customers and fans so that we can ultimately better serve your needs. We’ll be in touch!.</div><img class="img" src="https://i.imgur.com/0gCTgGQ.jpg" />
+                        <div class="description">We would love for you to consider joining our family. Our goal is to create a better way to communicate and learn from our customers and fans so that we can ultimately better serve your needs. We’ll be in touch!.</div><img class="img" src="./assets/cta_pic.png" />
                     </div>
                 </div>
                 <div class="right">
