@@ -812,14 +812,18 @@
             <div class="copyrightSection">© Footer copy goes here</div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
     <script>
         var iframe = document.getElementById("app_form");
         var parts = window.location.pathname.split('/');
         var lastSegment = parts.pop() || parts.pop();
         var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
         var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
-
         iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);
+        iFrameResize({
+            log: false,
+            heightCalculationMethod : 'max',
+        }, '#app_form');
     </script>
 </body>
 
