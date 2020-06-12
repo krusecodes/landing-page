@@ -1,0 +1,799 @@
+<!doctype html>
+
+<html>
+<head>
+  <title data-react-helmet="true">AspireIQ Ambassador Program</title>
+  <meta data-react-helmet="true" charSet="utf-8" />
+  <meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1" />
+  <meta data-react-helmet="true" name="description" content="Join the AspireIQ Ambassador Program" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <style>
+      @import url(https://use.typekit.net/aqe5wqr.css);      
+      
+      html,
+      body {
+          width: 100%;
+          height: 100%;
+      }
+      
+      input::-ms-clear,
+      input::-ms-reveal {
+          display: none;
+      }
+      
+      *,
+      *::before,
+      *::after {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      
+      html {
+          font-family: sans-serif;
+          line-height: 1.15;
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+          -ms-overflow-style: scrollbar;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      
+      @-ms-viewport {
+          width: device-width;
+      }
+
+      body {
+          margin: 0;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+          font-variant: tabular-nums;
+          line-height: 1.5;
+          background-color: #fff;
+          -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
+      }
+
+      a {
+          color: #1890ff;
+          text-decoration: none;
+          background-color: transparent;
+          outline: none;
+          cursor: pointer;
+          -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+          -webkit-text-decoration-skip: objects;
+      }
+      
+      a:hover {
+          color: #40a9ff;
+      }
+      
+      a:active {
+          color: #096dd9;
+      }
+      
+      a:active,
+      a:hover {
+          text-decoration: none;
+          outline: 0;
+      }
+      
+      a[disabled] {
+          color: rgba(0, 0, 0, 0.25);
+          cursor: not-allowed;
+          pointer-events: none;
+      }
+
+      .MemberJoin .headerSection .title {
+          font-family: "poppins", sans-serif;
+          font-size: 60px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: -0.5px;
+          color: #1a1818;
+      }
+      
+      .MemberJoin .aboutSection > .title,
+      .MemberJoin .fbSection .title {
+          font-family: "poppins", sans-serif;
+          font-size: 48px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #1a1818;
+      }
+      
+      .MemberJoin .benefitsSection .title,
+      .MemberJoin .applySection .left .title {
+          font-family: "poppins", sans-serif;
+          font-size: 34px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 0.3px;
+          color: #1F3F8B;
+      }
+      
+      .MemberJoin .headerSection .subtitle,
+      .MemberJoin .aboutSection > .left > .subtitle {
+          font-family: "poppins", sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #1a1818;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .header {
+          font-family: "poppins", sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: 0.2px;
+          color: #1a1818;
+      }
+      
+      .MemberJoin .aboutSection .applyBox .title,
+      .MemberJoin .aboutSection .applyBox .subtitle,
+      .MemberJoin .aboutSection > .left > .description,
+      .MemberJoin .benefitsSection .description,
+      .MemberJoin .benefitsSection .left .listItem .itemText,
+      .MemberJoin .benefitsSection .right .listItem .itemText,
+      .MemberJoin .applySection .left .description,
+      .MemberJoin .fbSection .description {
+          font-family: "poppins", sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: 0.4px;
+          color: #1F3F8B;
+      }
+      
+      .MemberJoin .copyrightSection {
+          font-family: "poppins", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.43;
+          letter-spacing: 0.3px;
+          color: #1F3F8B;
+      }
+      
+      .MemberJoin {
+          height: 100%;
+          background-color: white;
+      }
+      
+      .MemberJoin .headerSection {
+          text-align: center;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          flex-direction: column;
+          padding: 20px;
+          min-height: 800px;
+          background-color: black;
+          background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/sarandy-westfall-yj5vVBO7NZ8-unsplash%20-%20Nisha%20Shah.jpg);
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+      }
+      
+      .MemberJoin .headerSection .btn {
+          height: 60px;
+          min-width: 234px;
+          font-size: 18px;
+      }
+      
+      .MemberJoin .headerSection .title {
+          color: white !important;
+          margin-bottom: 30px;
+      }
+      
+      .MemberJoin .headerSection .subtitle {
+          color: white !important;
+          margin-bottom: 40px;
+      }
+      
+      .MemberJoin .headerSection .logo {
+          display: none;
+          width: 40px;
+          height: 40px;
+          margin-bottom: 32px;
+          -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+      }
+      
+      @media only screen and (max-width: 600px) {
+          .MemberJoin .headerSection {
+              min-height: 600px;
+              text-align: left;
+              background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/sarandy-westfall-yj5vVBO7NZ8-unsplash%20-%20Nisha%20Shah.jpg);
+          }
+          .MemberJoin .headerSection .title {
+              font-size: 48px;
+          }
+          .MemberJoin .headerSection .subtitle {
+              font-size: 26px;
+          }
+          .MemberJoin .headerSection .logo {
+              display: block;
+          }
+      }
+      
+      .MemberJoin .aboutSection {
+          text-align: center;
+          padding-top: 120px;
+          padding-bottom: 120px;
+          padding-left: 80px;
+          padding-right: 80px;
+          background-color: white;
+          background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/rawkkim-_Qt2XF4ch3s-unsplash%20-%20Nisha%20Shah.jpg);
+          background-size: cover;
+          background-position: center 90%;
+          background-repeat: no-repeat;
+      }
+      
+      .MemberJoin .aboutSection .left {
+          margin-right: auto;
+          max-width: 500px;
+          text-align: left;
+      }
+      
+      .MemberJoin .aboutSection .applyBox {
+          padding: 20px;
+          border-radius: 6px;
+          text-align: center;
+          background: rgba(31, 63, 139, 0.783);
+          box-shadow: 0px 16px 34px rgba(48, 53, 57, 0.25);
+      }
+      
+      .MemberJoin .aboutSection .applyBox .title {
+          font-weight: bold;
+          font-size: 18px;
+          color: white;
+          margin-bottom: 10px;
+      }
+      
+      .MemberJoin .aboutSection .applyBox .subtitle {
+          color: white;
+          margin-bottom: 14px;
+      }
+      
+      .MemberJoin .aboutSection .applyBox .btn {
+          height: 44px;
+          min-width: 177px;
+          font-size: 16px;
+      }
+      
+      .MemberJoin .aboutSection > .title {
+          margin-bottom: 120px;
+          color: #ffff;
+      }
+      
+      .MemberJoin .aboutSection > .left > .subtitle {
+          margin-bottom: 40px;
+          color: #ffff;
+      }
+      
+      .MemberJoin .aboutSection > .left > .description {
+          margin-bottom: 30px;
+      }
+      
+      @media only screen and (max-width: 600px) {
+          .MemberJoin .aboutSection {
+              background-image: none;
+              text-align: left;
+              padding-top: 50px;
+              padding-bottom: 50px;
+              padding-left: 25px;
+              padding-right: 25px;
+          }
+          .MemberJoin .aboutSection > .title {
+              margin-bottom: 24px;
+          }
+          .MemberJoin .aboutSection .title {
+              font-size: 30px;
+          }
+          .MemberJoin .aboutSection .subtitle {
+              font-size: 22px;
+          }
+      }
+      
+      .MemberJoin .benefitsSection {
+          background: #2e426d;
+          min-height: 400px;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+      }
+      
+      .MemberJoin .benefitsSection .title {
+          margin-bottom: 20px;
+      }
+      
+      .MemberJoin .benefitsSection .description {
+          font-size: 18px;
+      }
+      
+      .MemberJoin .benefitsSection .left {
+          -webkit-box-flex: 1;
+          flex: 1;
+          padding: 60px 80px;
+          background-color: #2e426d;
+          background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/MacBook%20Pro%20-%205.png);
+          background-size: cover;
+          background-position: center 10%;
+          background-repeat: no-repeat;
+      }
+      
+      .MemberJoin .benefitsSection .left .title,
+      .MemberJoin .benefitsSection .left .description {
+          color: white;
+      }
+      
+      .MemberJoin .benefitsSection .left .description {
+          margin-bottom: 50px;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          margin-bottom: 30px;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .icon {
+          padding-right: 20px;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .icon * {
+          fill: #F58984 !important;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .text {
+          -webkit-box-flex: 1;
+          flex: 1;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .header {
+          color: #F58984;
+          margin-bottom: 8px;
+      }
+      
+      .MemberJoin .benefitsSection .left .listItem .itemText {
+          color: white;
+          margin-bottom: 15px;
+      }
+      
+      .MemberJoin .benefitsSection .right {
+          -webkit-box-flex: 1;
+          flex: 1;
+          padding: 60px 80px;
+          background-color: #e9e8ea;
+          background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/MacBook%20Pro%20-%206.png);
+          background-size: cover;
+          background-position: center 10%;
+          background-repeat: no-repeat;
+      }
+      
+      .MemberJoin .benefitsSection .right .description {
+          margin-bottom: 50px;
+      }
+      
+      .MemberJoin .benefitsSection .right .listItem {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          margin-bottom: 20px;
+      }
+      
+      .MemberJoin .benefitsSection .right .listItem .icon {
+          overflow: hidden;
+          margin-right: 10px;
+          margin-top: 4px;
+          position: relative;
+          width: 10px;
+          height: 10px;
+          background: #F58984;
+          -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+          -webkit-transform-origin: center center;
+          transform-origin: center center;
+      }
+      
+      .MemberJoin .benefitsSection .right .listItem .icon::before {
+          content: '';
+          background: #F58984;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          -webkit-transform: rotateZ(-45deg) translateX(5px) translateY(-5px);
+          transform: rotateZ(-45deg) translateX(5px) translateY(-5px);
+      }
+      
+      .MemberJoin .benefitsSection .right .listItem .itemText {
+          -webkit-box-flex: 1;
+          flex: 1;
+          margin-bottom: 15px;
+      }
+      
+      @media only screen and (max-width: 900px) {
+          .MemberJoin .benefitsSection {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              flex-direction: column;
+          }
+          .MemberJoin .benefitsSection .title {
+              font-size: 34px;
+          }
+          .MemberJoin .benefitsSection .left {
+              background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/MacBook%20Pro%20-%205.png);
+          }
+          .MemberJoin .benefitsSection .right {
+              background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/MacBook%20Pro%20-%206.png);
+          }
+          .MemberJoin .benefitsSection .left,
+          .MemberJoin .benefitsSection .right {
+              padding: 50px 25px;
+          }
+      }
+      
+      .MemberJoin .applySection {
+          background: white;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          padding-top: 100px;
+          padding-bottom: 100px;
+      }
+      
+      .MemberJoin .applySection .left {
+          -webkit-box-flex: 1;
+          flex: 1;
+      }
+      
+      .MemberJoin .applySection .left > * {
+          padding-left: 80px;
+      }
+      
+      .MemberJoin .applySection .left .title {
+          color: #2e426d;
+          margin-bottom: 30px;
+      }
+      
+      .MemberJoin .applySection .left .description {
+          margin-bottom: 40px;
+      }
+      
+      .MemberJoin .applySection .left .img {
+          width: 100%;
+      }
+      
+      .MemberJoin .applySection .right {
+          -webkit-box-flex: 1;
+          flex: 1;
+          text-align: center;
+      }
+      
+      .MemberJoin .applySection .right > * {
+          max-width: 400px;
+          margin: auto;
+      }
+      
+      @media only screen and (max-width: 900px) {
+          .MemberJoin .applySection {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              flex-direction: column;
+              padding-top: 50px;
+              padding-bottom: 50px;
+              padding-left: 25px;
+              padding-right: 25px;
+          }
+          .MemberJoin .applySection .left > * {
+              padding-left: 0;
+          }
+          .MemberJoin .applySection .left .img {
+              display: none;
+          }
+          .MemberJoin .applySection .right {
+              margin-top: 32px;
+          }
+          .MemberJoin .applySection .title {
+              font-size: 34px;
+          }
+      }
+      
+      .MemberJoin .fbSection {
+          display: none;
+          background: #2e426d;
+          padding-top: 120px;
+          padding-bottom: 120px;
+          padding-left: 25px;
+          padding-right: 25px;
+          text-align: center;
+      }
+      
+      .MemberJoin .fbSection .content {
+          max-width: 800px;
+          display: inline-block;
+      }
+      
+      .MemberJoin .fbSection .title {
+          color: white;
+          margin-bottom: 40px;
+      }
+      
+      .MemberJoin .fbSection .title .icon {
+          margin-right: 16px;
+      }
+      
+      .MemberJoin .fbSection .title .icon * {
+          fill: white !important;
+      }
+      
+      .MemberJoin .fbSection .description {
+          color: white;
+          margin-bottom: 40px;
+      }
+      
+      @media only screen and (max-width: 800px) {
+          .MemberJoin .fbSection {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              flex-direction: column;
+              padding-top: 50px;
+              padding-bottom: 50px;
+          }
+          .MemberJoin .fbSection .title {
+              font-size: 34px;
+              margin-bottom: 25px;
+          }
+          .MemberJoin .fbSection .title .icon {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 25px;
+          }
+          .MemberJoin .fbSection .description {
+              margin-bottom: 25px;
+          }
+      }
+      
+      .MemberJoin .copyrightSection {
+          background: #1F3F8B;
+          color: #7E8AA5;
+          text-align: center;
+          padding-top: 18px;
+          padding-bottom: 18px;
+          padding-left: 25px;
+          padding-right: 25px;
+      }
+
+      .Button {
+          position: relative;
+          padding: 8px 16px;
+          box-sizing: border-box;
+          display: -webkit-inline-box;
+          display: inline-flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          flex-direction: row;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          min-width: 80px;
+          height: 40px;
+          cursor: pointer;
+          overflow: hidden;
+          font-size: 13px;
+          line-height: 20px;
+          border-radius: 10px;
+          -webkit-transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+          transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      }
+      
+      .Button:hover.primary {
+          background-color: rgba(245, 138, 132, 0.742);
+      }
+      
+      .Button:active.primary {
+          background-color: #F58984;
+      }
+      
+      .Button.primary {
+          color: white;
+          background-color: #F58984;
+          border: none;
+      }
+      
+      .Button.round {
+          border-radius: 100px;
+      }
+      
+      .Button .label {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          font-weight: 600;
+      }
+
+      .SvgIcon {
+            position: relative;
+            display: inline-block;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: currentColor;
+            fill: currentColor;
+        }
+  </style>
+</head>
+
+<body>
+    <main class="content">
+        <div class="MemberJoin">
+            <div class="headerSection"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE1MCAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxtYXNrIGlkPSJtYXNrMCIgbWFzay10eXBlPSJhbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNDEiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMTQwLjQ0OUgxMC40NTg0TDc0Ljc1ODYgMEg2NC4zMDAyTDAgMTQwLjQ0OVpNMTM3LjgxNCAxMjQuMDM3QzE0Mi4xNzMgMTM2LjE3OCAxNDkuNTg4IDEzNy4yNjggMTQ5LjU4OCAxMzcuMjY4VjE0MC4yMjZIMTI1LjU0MUMxMTIuMDEzIDE0MC4yMjYgMTA0Ljg2MSAxMzMuMDIyIDEwMS4xODkgMTI0LjM1Qzk3LjQzMjggMTE1LjQ3NyA5MC42NjYzIDk4LjY2NzkgODYuMzA5OCA4Ni41MjY2QzgxLjk1MDUgNzQuMzg1MyA3NC41MzYgNzMuMjk1OCA3NC41MzYgNzMuMjk1OFY3MC4zMzczSDk4LjU4MzRDMTEyLjExMSA3MC4zMzczIDExOS4yNjMgNzcuNTQ0OSAxMjIuOTMyIDg2LjIxNjVDMTI2LjY5MSA5NS4wODY0IDEzMy40NTUgMTExLjg5NiAxMzcuODE0IDEyNC4wMzdaIiBmaWxsPSJ3aGl0ZSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazApIj4KPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNDEiIGZpbGw9IiMzOTk2RTAiLz4KPC9nPgo8L3N2Zz4K" class="logo" />
+                <div class="title">Maven by AspireIQ</div>
+                <a href="#apply">
+                    <div class="Button btn primary round">
+                        <div class="label">Let's Connect</div>
+                    </div>
+                </a>
+            </div>
+            <div class="aboutSection">
+                <div class="title">About the membership</div>
+                <div class="left">
+                    <div class="subtitle">At AspireIQ, we have helped the world's biggest global brands connect with top social influencers. It's now time to connect them with their top enthusiasts.</div>
+                    <div class="applyBox">
+                        <div class="subtitle">We’d love to get to know you better so we can connect you with the brands that resonate best with you. We can’t wait to meet you.  </div>
+                        <a href="#apply">
+                            <div class="Button btn primary round">
+                                <div class="label">Let's Connect</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="benefitsSection">
+                <div class="left">
+                    <div class="title">Who you are</div>
+                    <div class="description">We're looking for you if these descriptions fit you:</div>
+                    <div class="listItem">
+                        <div class="icon" class="SvgIcon">
+                            <i class="fas fa-check" style="width:24px;height:24px"></i>
+                        </div>
+                        <div class="text">
+                            <div class="header">Specific about the things you buy</div>                            
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon" class="SvgIcon">
+                            <i class="fas fa-building" style="width:24px;height:24px"></i>
+                        </div>
+                        <div class="text">
+                            <div class="header">Particular about the brands you do business with</div>                            
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon" class="SvgIcon">
+                            <i class="fas fa-star" style="width:24px;height:24px"></i>
+                        </div>
+                        <div class="text">
+                            <div class="header">You hold brands to a personal standard</div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon" class="SvgIcon">
+                            <i class="fas fa-bolt" style="width:24px;height:24px"></i>
+                        </div>
+                        <div class="text">
+                            <div class="header">You’re often an early adopter - you’re the first in your group to have the latest and the greatest</div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon" class="SvgIcon">
+                            <i class="fas fa-volume-up" style="width:24px;height:24px"></i>
+                        </div>
+                        <div class="text">
+                            <div class="header">You want your voice to be heard - and drive impact</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">What you&#x27;ll get</div>
+                    <div class="description">Just some of the things you can expect:</div>
+                    <div class="listItem">
+                        <div class="icon"></div>
+                        <div class="itemText">Ability to provide feedback directly to product and marketing teams</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon"></div>
+                        <div class="itemText">Participate in helping shape the brand’s future</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon"></div>
+                        <div class="itemText">Invitations to exclusive events, offers, and beta programs</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon"></div>
+                        <div class="itemText">Early access to new products</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon"></div>
+                        <div class="itemText">Swag</div>
+                    </div>
+                </div>
+            </div>
+            <div class="applySection" id="apply">
+                <div class="left">
+                    <div>
+                        <div class="title">Let's Connect</div>
+                        <div class="description">We’d love to get to know you better so we can connect you with the brands that resonate best with you. We can’t wait to meet you. </div><img class="img" src="https://storage.googleapis.com/aspirex-program-onboarding/maven_landing_page/allie-I3nD16F56Ko-unsplash%20-%20Nisha%20Shah%201.png"/>
+                    </div>
+                </div>
+                <div class="right">
+                  <iframe id="app_form" frameBorder="0" style="width:100%;height:650px;"></iframe>
+                </div>
+            </div>
+            <div class="fbSection">
+                <div class="content">
+                    <div class="title">
+                        <svg class="icon SvgIcon" style="width:34px;height:34px" viewBox="0 0 408.788 408.788">
+                            <path style="fill:#475993" d="M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z"></path>
+                        </svg>Join the Facebook group</div>
+                    <div class="description">Once you&#x27;re approved as an ambassador, join the private Facebook Group to get notified about new campaigns on AspireIQ before anyone else, learn about exclusive events, connect with other ambassadors, share feedback directly with the AspireIQ team, and stay up to date on industry news!</div>
+                    <div class="Button primary round">
+                        <div class="label">Join the Group</div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrightSection">© 2019 AspireIQ, Inc. All Rights Reserved. 550 Montgomery St #800, San Francisco, CA 94111</div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
+    <script>
+        var iframe = document.getElementById("app_form");
+        var parts = window.location.pathname.split('/');
+        var lastSegment = parts.pop() || parts.pop();
+        var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
+        var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
+        iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);
+        iFrameResize({
+            log: false,
+            heightCalculationMethod : 'max',
+        }, '#app_form');
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
