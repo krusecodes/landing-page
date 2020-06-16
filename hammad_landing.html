@@ -253,8 +253,9 @@
       
       .MemberJoin .aboutSection .left {
           margin-right: auto;
+          margin-left: auto;
           max-width: 500px;
-          text-align: left;
+          text-align: center;
       }
       
       .MemberJoin .aboutSection .applyBox {
@@ -300,13 +301,14 @@
       @media only screen and (max-width: 600px) {
           .MemberJoin .aboutSection {
               background-image: none;
-              text-align: left;
+              /* text-align: left; */
               padding-top: 50px;
               padding-bottom: 50px;
               padding-left: 25px;
               padding-right: 25px;
           }
           .MemberJoin .aboutSection > .title {
+              
               margin-bottom: 24px;
           }
           .MemberJoin .aboutSection .title {
@@ -315,6 +317,14 @@
           .MemberJoin .aboutSection .subtitle {
               font-size: 22px;
           }
+
+          .MemberJoin .aboutSection > .title {  
+          color: #F58984;
+        }
+      
+        .MemberJoin .aboutSection > .left > .subtitle {
+          color: #2e426d;
+        }
       }
       
       .MemberJoin .benefitsSection {
