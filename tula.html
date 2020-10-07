@@ -365,7 +365,6 @@
       font-stretch: normal;
       line-height: normal;
       letter-spacing: normal;
-      color: #1a1818;
     }
 
     .aboutSection .subtitle {
@@ -451,8 +450,13 @@
     }
 
     a {
-      color: #1890ff;
       text-decoration: none;
+
+    }
+
+    .right a {
+      color: inherit;
+      text-decoration: underline;
       background-color: transparent;
       outline: none;
       cursor: pointer;
@@ -462,11 +466,11 @@
     }
 
     a:hover {
-      color: #40a9ff;
+      /* color: #48c4d8; */
     }
 
     a:active {
-      color: #096dd9;
+      /* color: #096dd9; */
     }
 
     a:active,
@@ -509,7 +513,7 @@
       font-stretch: normal;
       line-height: normal;
       letter-spacing: 0.3px;
-      color: #1a1818;
+      color: #4c4f56;
     }
 
     .MemberJoin .aboutSection>.left>.subtitle,
@@ -577,6 +581,7 @@
     }
 
     .MemberJoin .headerSection {
+      background: #d7eff5;
       text-align: center;
       display: -webkit-box;
       display: flex;
@@ -600,7 +605,7 @@
     .MemberJoin .headerSection::before {
       content: "";
       background-image: url("https://storage.cloud.google.com/aspirex-program-onboarding/tula/hero.jpg?_ga=2.56106860.-671456732.1596302497&_gac=1.128366846.1596302501.Cj0KCQjwpZT5BRCdARIsAGEX0zm6m-ZENsNeT1suL52nnmMM0vE1bHCAFqTBnCkr4ii6hGsQ_fv1yVsaAoE2EALw_wcB");
-      opacity: 0.5;
+      opacity: 0.4;
       background-size: cover;
       background-position: center 10%;
       background-repeat: no-repeat;
@@ -638,7 +643,8 @@
     }
 
     .MemberJoin .headerSection .subtitle {
-      color: white !important;
+      /* color: white !important; */
+      color: #ff5483 !important;
       margin-bottom: 40px;
       font-family: lato, sans-serif;
     }
@@ -904,7 +910,7 @@
       margin-right: 10px;
       margin-top: 4px;
       position: relative;
-      color: #f9cfdd;
+      color: #484c56;
     }
 
     .MemberJoin .benefitsSection .right .listItem .itemText {
@@ -928,7 +934,6 @@
       /* .MemberJoin .benefitsSection .left {
       background-image: url(https://i.imgur.com/kagvQBZ.jpg);
     }
-
     .MemberJoin .benefitsSection .right {
       background-image: url(https://i.imgur.com/0b2UneB.jpg);
     } */
@@ -1287,7 +1292,8 @@
                 <i class="fas fa-fw fa-1x fa-heart"></i>
               </div>
               <div class="itemText">
-                Opportunities to be posted on @TULA instagram account (306K)
+                Opportunities to be posted on <a href="https://www.instagram.com/TULA" target="_blank">@TULA's instagram
+                  account</a> with 320K + followers
               </div>
             </div>
             <div class="listItem">
@@ -1295,7 +1301,7 @@
                 <i class="fas fa-fw fa-1x fa-heart"></i>
               </div>
               <div class="itemText">
-                Chance to be featured in TULA emails (***)
+                Chance to be featured in TULA emails
               </div>
             </div>
             <div class="listItem">
@@ -1359,9 +1365,7 @@
                 </p>
 
                 <!--  <p class="description">
-
                   Info:
-
                   <br>First Name, Last name
                   <br>Email address
                   <br>Shipping address
@@ -1384,7 +1388,6 @@
           </div>
         </div>
         <!-- <div class="left">
-
         </div>
         <div class="right">
         </div> -->
@@ -1411,46 +1414,21 @@
     </div>
   </main>
   <script src="https://kit.fontawesome.com/9dd1dcdbe8.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
+    integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
   <script>
     var iframe = document.getElementById("app_form");
     var parts = window.location.pathname.split('/');
     var lastSegment = parts.pop() || parts.pop();
     var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
-    var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
-
-    iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);
-  </script>
-
-  <script>
-    function anchorLinkHandler(e) {
-      const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-
-      e.preventDefault();
-      const targetID = this.getAttribute("href");
-      const targetAnchor = document.querySelector(targetID);
-      if (!targetAnchor) return;
-      const originalTop = distanceToTop(targetAnchor);
-
-      window.scrollBy({
-        top: originalTop,
-        left: 0,
-        behavior: "smooth"
-      });
-
-      const checkIfDone = setInterval(function () {
-        const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-        if (distanceToTop(targetAnchor) === 0 || atBottom) {
-          targetAnchor.tabIndex = "-1";
-          targetAnchor.focus();
-          window.history.pushState("", "", targetID);
-          clearInterval(checkIfDone);
-        }
-      }, 1000);
-    }
-
-    const linksToAnchors = document.querySelectorAll('a[href^="#"]');
-
-    linksToAnchors.forEach(each => (each.onclick = anchorLinkHandler));
+    var properties = JSON.stringify({
+      primaryColor: '#000000'
+    });
+    iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&properties=' + encodeURIComponent(properties));
+    iFrameResize({
+      log: false,
+      heightCalculationMethod: 'max',
+    }, '#app_form');
   </script>
 </body>
 
