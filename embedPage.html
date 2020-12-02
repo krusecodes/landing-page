@@ -15,7 +15,7 @@
 
 <body>
     <div>
-        <!-- Add this snippet whereever you want the form to populate -->
+        <!-- Add this snippet wherever you want the form to populate -->
         <iframe id="app_form" frameborder="0" style="width: 100%;"></iframe>
     </div>
     <!-- The below script ensures that this form directs anyone who fills it out to AspireIQ Elevate -->
@@ -23,7 +23,7 @@
         integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
     <script>
         var iframe = document.getElementById("app_form");
-        var src = 'https://community.aspireiq.com/onboarding_form/ambassador?clientId=q7aTmcnRIrdAYc5zVMTSdpZoZ2PcL5CP={optional json to customize colors}'
+        var src = 'https://community.aspireiq.com/onboarding_form/Ambassadors?clientId=0XzUR77ut5pSTBAhqRZd42xNK2AO6fX8&properties={optional json to customize colors}'
         iframe.setAttribute('src', src);
         iFrameResize({
             log: false,
@@ -32,8 +32,8 @@
     </script>
     <!-- If you decide to customize the color of your form, below are the Json details -->
     <!-- var properties = JSON.stringify({
-            primaryColor: '#000000'
-          }); -->
+           primaryColor: '#000000'
+         }); -->
 
     <!-- I you decide to add properties to the src url, the form should look like this: + '&properties=' + encodeURIComponent(properties)           -->
 </body>

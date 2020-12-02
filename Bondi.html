@@ -7,8 +7,9 @@
     <meta data-react-helmet="true" charSet="utf-8" />
     <meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge" />
     <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1" />
-    <meta data-react-helmet="true" name="description" content="Join the AspireIQ Ambassador Program" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta data-react-helmet="true" name="description" content="Join the Bondi Squad" />
+    <link rel="shortcut icon"
+        href="https://storage.googleapis.com/aspirex-program-onboarding/bondi_sands/favicon.png" />
 
     <style>
         @import url(https://use.typekit.net/yjz3jaa.css);
@@ -191,7 +192,7 @@
             padding: 20px;
             min-height: 800px;
             background-color: black;
-            background-image: url(https://i.imgur.com/Y88h7lh.jpg);
+            background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/bondi_sands/herobg.png);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -236,20 +237,16 @@
             .MemberJoin .headerSection .subtitle {
                 font-size: 26px;
             }
-
-            .MemberJoin .headerSection .logo {
-                display: block;
-            }
         }
 
         .MemberJoin .aboutSection {
             text-align: center;
             padding-top: 120px;
             padding-bottom: 120px;
-            padding-left: 80px;
-            padding-right: 80px;
+            padding-left: 350px;
+            padding-right: 350px;
             background-color: white;
-            background-image: url(https://i.imgur.com/LA92ksd.jpg);
+            background-image: url(https://storage.googleapis.com/aspirex-program-onboarding/bondi_sands/Mask%20Group.png);
             background-size: cover;
             background-position: center 90%;
             background-repeat: no-repeat;
@@ -263,21 +260,29 @@
 
         .MemberJoin .aboutSection .applyBox {
             padding: 20px;
-            border-radius: 6px;
             text-align: center;
-            background: rgba(56, 69, 104, 0.9);
+            background: #ffffffdb;
             box-shadow: 0px 16px 34px rgba(48, 53, 57, 0.25);
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
         }
 
         .MemberJoin .aboutSection .applyBox .title {
             font-weight: bold;
             font-size: 18px;
-            color: white;
+            color: #00B1E9;
             margin-bottom: 10px;
         }
 
         .MemberJoin .aboutSection .applyBox .subtitle {
-            color: white;
+            color: #4D4D4D;
             margin-bottom: 14px;
         }
 
@@ -289,7 +294,7 @@
 
         .MemberJoin .aboutSection>.title {
             margin-bottom: 120px;
-            color: #2e426d;
+            color: #ffffff;
         }
 
         .MemberJoin .aboutSection>.left>.subtitle {
@@ -304,7 +309,6 @@
         @media only screen and (max-width: 600px) {
             .MemberJoin .aboutSection {
                 background-image: none;
-                text-align: left;
                 padding-top: 50px;
                 padding-bottom: 50px;
                 padding-left: 25px;
@@ -639,22 +643,22 @@
         }
 
         .Button:hover.primary {
-            background-color: #4fa7ee;
+            background-color: rgba(51, 168, 222, 0.625);
         }
 
         .Button:active.primary {
-            background-color: #3996e0;
+            background-color: #33A8DE;
         }
 
         .Button.primary {
             color: white;
-            background-color: #3996e0;
+            background-color: #33A8DE;
             border: none;
         }
 
-        .Button.round {
+        /* .Button.round {
             border-radius: 100px;
-        }
+        } */
 
         .Button .label {
             -webkit-user-select: none;
@@ -683,33 +687,26 @@
             <div class="headerSection"><img
                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE1MCAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxtYXNrIGlkPSJtYXNrMCIgbWFzay10eXBlPSJhbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNDEiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMTQwLjQ0OUgxMC40NTg0TDc0Ljc1ODYgMEg2NC4zMDAyTDAgMTQwLjQ0OVpNMTM3LjgxNCAxMjQuMDM3QzE0Mi4xNzMgMTM2LjE3OCAxNDkuNTg4IDEzNy4yNjggMTQ5LjU4OCAxMzcuMjY4VjE0MC4yMjZIMTI1LjU0MUMxMTIuMDEzIDE0MC4yMjYgMTA0Ljg2MSAxMzMuMDIyIDEwMS4xODkgMTI0LjM1Qzk3LjQzMjggMTE1LjQ3NyA5MC42NjYzIDk4LjY2NzkgODYuMzA5OCA4Ni41MjY2QzgxLjk1MDUgNzQuMzg1MyA3NC41MzYgNzMuMjk1OCA3NC41MzYgNzMuMjk1OFY3MC4zMzczSDk4LjU4MzRDMTEyLjExMSA3MC4zMzczIDExOS4yNjMgNzcuNTQ0OSAxMjIuOTMyIDg2LjIxNjVDMTI2LjY5MSA5NS4wODY0IDEzMy40NTUgMTExLjg5NiAxMzcuODE0IDEyNC4wMzdaIiBmaWxsPSJ3aGl0ZSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazApIj4KPHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNDEiIGZpbGw9IiMzOTk2RTAiLz4KPC9nPgo8L3N2Zz4K"
                     class="logo" />
-                <div class="title">Program Name Here</div>
-                <div class="subtitle">This is where your short program blurb goes</div>
+                <div class="title">The Bondi Squad Ambassador Program</div>
+                <div class="subtitle">Want to be a part of our growing community of Bondi Sands lovers around the world?
+                </div>
                 <a href="#apply">
                     <div class="Button btn primary round">
-                        <div class="label">Call to Action</div>
+                        <div class="label">BE OUR NEXT SQUAD MEMBER</div>
                     </div>
                 </a>
             </div>
             <div class="aboutSection">
-                <div class="title">About the program</div>
-                <div class="left">
-                    <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum
-                        sociis natoque penatibus.</div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget
-                        gravida cum sociis natoque penatibus.</div>
-                    <div class="applyBox">
-                        <div class="title">Title of Call to Action Box</div>
-                        <div class="subtitle">Call to action box blurb</div>
-                        <a href="#apply">
-                            <div class="Button btn primary round">
-                                <div class="label">Call to Action</div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="title">Get the 411</div>
+
+                <div class="applyBox" style="margin-left: auto; margin-right: auto;">
+                    <div class="title">Who better to talk about our products than you; our Lovers that spend every Wash
+                        off Wednesday, Thursday Tanday and Fresh Tan Friday with us!</div>
+                    <div class="subtitle">Our ambassador community is a hand-selected group of loyal fans and content
+                        creators who share their authentic experiences with their friends, family and followers both
+                        online and in person. Each ambassador represents</div>
                 </div>
+
             </div>
             <div class="benefitsSection">
                 <div class="left">
