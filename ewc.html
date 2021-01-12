@@ -144,7 +144,7 @@
         }
 
         .MemberJoin .headerSection .subtitle,
-        .MemberJoin .aboutSection>.left>.subtitle {
+        .MemberJoin .aboutSection>.content>.right>.text>.subtitle {
             font-family: "neue-haas-unica", sans-serif;
             font-size: 24px;
             font-weight: 500;
@@ -168,7 +168,7 @@
 
         .MemberJoin .aboutSection .applyBox .title,
         .MemberJoin .aboutSection .applyBox .subtitle,
-        .MemberJoin .aboutSection>.left>.description,
+        .MemberJoin .aboutSection>.content>.right>.text>.description,
         .MemberJoin .benefitsSection .description,
         .MemberJoin .benefitsSection .left .listItem .itemText,
         .MemberJoin .benefitsSection .right .listItem .itemText,
@@ -266,19 +266,46 @@
             text-align: center;
             padding-top: 120px;
             padding-bottom: 120px;
-            padding-left: 80px;
-            padding-right: 80px;
-            background-color: white;
+            /* padding-left: 80px; */
+            /* padding-right: 80px; */
+            background-color: white;  
             /* background-image: url(assets/ewc-images/ewc-1.jpg);
             background-size: cover;
             background-position: center 90%;
             background-repeat: no-repeat; */
         }
 
-        .MemberJoin .aboutSection .left {
+        .MemberJoin .aboutSection .content {
+          display: flex;
+          flex-direction: row;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+        }
+
+        .MemberJoin .aboutSection .content .left {
+          -webkit-box-flex: 1;
+          flex: 1;
+        }
+
+        .MemberJoin .aboutSection .content .left .img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .MemberJoin .aboutSection .content .right {
+            -webkit-box-flex: 1;
+            flex: 1;
             margin-left: auto;
-            max-width: 500px;
             text-align: left;
+        }
+
+        .MemberJoin .aboutSection .content .right .text{
+            padding: 80px;
+            margin: 0 auto;
+            box-sizing: content-box;
+            max-width: 508px;
         }
 
         .MemberJoin .aboutSection .applyBox {
@@ -315,20 +342,20 @@
             color: #28103B;
         }
 
-        .MemberJoin .aboutSection>.left>.subtitle {
+        .MemberJoin .aboutSection>.content>.right>.text>.subtitle {
             margin-bottom: 40px;
             color: #28103B;
         }
 
-        .MemberJoin .aboutSection>.left>.description {
+        .MemberJoin .aboutSection>.content>.right>.text>.description {
             margin-bottom: 30px;
             color: #28103B;
         }
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 980px) {
             .MemberJoin .aboutSection {
                 background-image: none;
-                text-align: left;
+                text-align: center;
                 padding-top: 50px;
                 padding-bottom: 50px;
                 padding-left: 25px;
@@ -345,6 +372,14 @@
 
             .MemberJoin .aboutSection .subtitle {
                 font-size: 22px;
+            }
+
+            .MemberJoin .aboutSection .content .left {
+                display: none;
+            }
+
+            .MemberJoin .aboutSection .content .right .text {
+                padding: 0;
             }
         }
 
@@ -724,22 +759,29 @@
             </div>
             <div class="aboutSection">
                 <div class="title">About the program</div>
-                <div class="left">
-                    <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum
-                        sociis natoque penatibus.</div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget
-                        gravida cum sociis natoque penatibus.</div>
-                    <div class="applyBox">
-                        <div class="title">Title of Call to Action Box</div>
-                        <div class="subtitle">Call to action box blurb</div>
-                        <a href="#apply">
-                            <div class="Button btn primary round">
-                                <div class="label">Call to Action</div>
-                            </div>
-                        </a>
+                <div class="content">
+                  <div class="left">
+                    <img class="img" src="assets/ewc-images/ewc-1.jpg" />
+                  </div>
+                  <div class="right">
+                    <div class="text">
+                      <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida cum
+                          sociis natoque penatibus.</div>
+                      <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                          tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget
+                          gravida cum sociis natoque penatibus.</div>
+                      <div class="applyBox">
+                          <div class="title">Title of Call to Action Box</div>
+                          <div class="subtitle">Call to action box blurb</div>
+                          <a href="#apply">
+                              <div class="Button btn primary round">
+                                  <div class="label">Call to Action</div>
+                              </div>
+                          </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
             <div class="benefitsSection">
