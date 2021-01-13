@@ -1,0 +1,888 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title data-react-helmet="true">European Wax Center</title>
+    <meta data-react-helmet="true" charSet="utf-8" />
+    <meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta data-react-helmet="true" name="description" content="European Wax Center" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/jzf2pko.css">
+
+    <style>
+        @font-face {
+          font-family: PoynterOldstyleDisplay-Bold;
+          src: url(assets/ewc-fonts/PoynterOldstyleDisplay-Bold.otf);
+        }
+
+        @font-face {
+          font-family: PoynterOldstyleDisplay-SemiBold;
+          src: url(assets/ewc-fonts/PoynterOldstyleDisplay-SemiBold.otf);
+        }
+
+        @font-face {
+          font-family: PoynterOldstyleDisplay-SemiBoldItalic;
+          src: url(assets/ewc-fonts/PoynterOldstyleDisplay-SemiBoldItalic.otf);
+        }
+
+        @font-face {
+          font-family: PoynterOldstyleDisplay-Roman;
+          src: url(assets/ewc-fonts/PoynterOldstyleDisplay-Roman.otf);
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        input::-ms-clear,
+        input::-ms-reveal {
+            display: none;
+        }
+
+        *,
+        *::before,
+        *::after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        body {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 14px;
+            font-family: neue-haas-unica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            font-variant: tabular-nums;
+            line-height: 1.5;
+            background-color: #fff;
+            -webkit-font-feature-settings: 'tnum';
+            font-feature-settings: 'tnum';
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        a {
+            color: #1890ff;
+            text-decoration: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s;
+            -webkit-text-decoration-skip: objects;
+        }
+
+        a:hover {
+            color: #40a9ff;
+        }
+
+        a:active {
+            color: #096dd9;
+        }
+
+        a:active,
+        a:hover {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        a[disabled] {
+            color: rgba(0, 0, 0, 0.25);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .MemberJoin .headerSection .title {
+            font-family: "PoynterOldstyleDisplay-Bold", serif;
+            font-size: 60px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: -0.5px;
+            color: #1a1818;
+        }
+
+        .MemberJoin .aboutSection>.title,
+        .MemberJoin .fbSection .title {
+            font-family: "PoynterOldstyleDisplay-Bold", serif;
+            font-size: 48px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #1a1818;
+        }
+
+        .MemberJoin .benefitsSection .title,
+        .MemberJoin .applySection .left .title {
+            font-family: "PoynterOldstyleDisplay-Bold", serif;
+            font-size: 34px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.3px;
+            color: #1a1818;
+        }
+
+        .MemberJoin .headerSection .subtitle,
+        .MemberJoin .aboutSection>.content>.right>.text>.subtitle {
+            font-family: "neue-haas-unica", sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #1a1818;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .header {
+            font-family: "neue-haas-unica", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            color: #1a1818;
+        }
+
+        .MemberJoin .aboutSection .applyBox .title,
+        .MemberJoin .aboutSection .applyBox .subtitle,
+        .MemberJoin .aboutSection>.content>.right>.text>.description,
+        .MemberJoin .benefitsSection .description,
+        .MemberJoin .benefitsSection .left .listItem .itemText,
+        .MemberJoin .benefitsSection .right .listItem .itemText,
+        .MemberJoin .applySection .left .description,
+        .MemberJoin .fbSection .description {
+            font-family: "neue-haas-unica", sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 0.4px;
+            color: #1a1818;
+        }
+
+        .MemberJoin .copyrightSection {
+            font-family: "neue-haas-unica", sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.43;
+            letter-spacing: 0.3px;
+            color: #1a1818;
+        }
+
+        .MemberJoin {
+            height: 100%;
+            background-color: white;
+        }
+
+        .MemberJoin .headerSection {
+            text-align: center;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            padding: 20px;
+            min-height: 800px;
+            background-color: black;
+            background-image: linear-gradient(0.71deg, rgba(255, 255, 255, 0.43) 62.77%, rgba(196, 196, 196, 0) 99.4%), url(assets/ewc-images/ewc-banner.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .MemberJoin .headerSection .btn {
+            height: 60px;
+            min-width: 234px;
+            font-size: 18px;
+        }
+
+        .MemberJoin .headerSection .title {
+            color: #F7103E !important;
+            margin-bottom: 30px;
+        }
+
+        .MemberJoin .headerSection .subtitle {
+            color: #F7103E !important;
+            margin-bottom: 40px;
+        }
+
+        .MemberJoin .headerSection .logo {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 32px;
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .MemberJoin .headerSection {
+                min-height: 600px;
+                text-align: left;
+            }
+
+            .MemberJoin .headerSection .title {
+                font-size: 48px;
+            }
+
+            .MemberJoin .headerSection .subtitle {
+                font-size: 26px;
+            }
+
+        }
+
+        .MemberJoin .aboutSection {
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 120px;
+            background-color: white;  
+        }
+
+        .MemberJoin .aboutSection .content {
+          display: flex;
+          flex-direction: row;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+        }
+
+        .MemberJoin .aboutSection .content .left {
+          -webkit-box-flex: 1;
+          flex: 1;
+        }
+
+        .MemberJoin .aboutSection .content .left .img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .MemberJoin .aboutSection .content .right {
+            -webkit-box-flex: 1;
+            flex: 1;
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .MemberJoin .aboutSection .content .right .text{
+            padding: 80px;
+            margin: 0 auto;
+            box-sizing: content-box;
+            max-width: 508px;
+        }
+
+        .MemberJoin .aboutSection .applyBox {
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            background-color: #28103B;
+            box-shadow: 0px 16px 34px rgba(48, 53, 57, 0.25);
+        }
+
+        .MemberJoin .aboutSection .applyBox .title {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .MemberJoin .aboutSection .applyBox .subtitle {
+            color: white;
+            margin-bottom: 14px;
+        }
+
+        .MemberJoin .aboutSection .applyBox .btn {
+            height: 44px;
+            min-width: 177px;
+            font-size: 16px;
+            color: #28103B;
+            background-color: white;
+        }
+
+        .MemberJoin .aboutSection>.title {
+            margin-bottom: 120px;
+            color: #28103B;
+        }
+
+        .MemberJoin .aboutSection>.content>.right>.text>.subtitle {
+            margin-bottom: 40px;
+            color: #28103B;
+        }
+
+        .MemberJoin .aboutSection>.content>.right>.text>.description {
+            margin-bottom: 30px;
+            color: #28103B;
+        }
+
+        @media only screen and (max-width: 980px) {
+            .MemberJoin .aboutSection {
+                background-image: none;
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .MemberJoin .aboutSection>.title {
+                margin-bottom: 24px;
+            }
+
+            .MemberJoin .aboutSection .title {
+                font-size: 30px;
+            }
+
+            .MemberJoin .aboutSection .subtitle {
+                font-size: 22px;
+            }
+
+            .MemberJoin .aboutSection .content .left {
+                display: none;
+            }
+
+            .MemberJoin .aboutSection .content .right .text {
+                padding: 0;
+            }
+        }
+
+        .MemberJoin .benefitsSection {
+            background: #2e426d;
+            min-height: 400px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+        }
+
+        .MemberJoin .benefitsSection .title {
+            margin-bottom: 20px;
+        }
+
+        .MemberJoin .benefitsSection .description {
+            font-size: 18px;
+        }
+
+        .MemberJoin .benefitsSection .left {
+            -webkit-box-flex: 1;
+            flex: 1;
+            padding: 60px 80px;
+            background-color: #2e426d;
+            background-image: linear-gradient(359.53deg, rgba(247, 16, 62, 0.55) 12.39%, rgba(242, 225, 209, 0.21) 81.4%), linear-gradient(89.47deg, rgba(247, 16, 62, 0.88) 46.75%, rgba(242, 225, 209, 0.53) 99.6%), url(assets/ewc-images/ewc-2.jpg);
+            background-size: cover;
+            background-position: center 10%;
+            background-repeat: no-repeat;
+        }
+
+        .MemberJoin .benefitsSection .left .title,
+        .MemberJoin .benefitsSection .left .description {
+            color: white;
+        }
+
+        .MemberJoin .benefitsSection .left .description {
+            margin-bottom: 50px;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            margin-bottom: 30px;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .icon {
+            padding-right: 20px;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .icon * {
+            fill: white !important;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .text {
+            -webkit-box-flex: 1;
+            flex: 1;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .header {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .MemberJoin .benefitsSection .left .listItem .itemText {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .MemberJoin .benefitsSection .right {
+            -webkit-box-flex: 1;
+            flex: 1;
+            padding: 60px 80px;
+            background-color: #e9e8ea;
+            background-image: linear-gradient(179.24deg, rgba(40, 16, 59, 0.24) 32.8%, rgba(40, 16, 59, 0.24) 39.41%, rgba(242, 241, 245, 0) 95.64%), linear-gradient(89.81deg, rgba(40, 16, 59, 0.76) 44.27%, rgba(242, 241, 245, 0.71) 91.49%),url(assets/ewc-images/ewc-3.jpg);
+            background-size: cover;
+            background-position: center 10%;
+            background-repeat: no-repeat;
+        }
+
+        .MemberJoin .benefitsSection .right .title {
+            color: white !important;
+        }
+
+        .MemberJoin .benefitsSection .right .description {
+            color: white !important;
+            margin-bottom: 50px;
+        }
+
+        .MemberJoin .benefitsSection .right .listItem {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .MemberJoin .benefitsSection .right .listItem .icon {
+            padding-right: 20px;
+        }
+
+        .MemberJoin .benefitsSection .right .listItem .icon * {
+            fill: white !important;
+        }
+
+        .MemberJoin .benefitsSection .right .listItem .itemText {
+            -webkit-box-flex: 1;
+            flex: 1;
+            margin-bottom: 15px;
+            color: white !important;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .MemberJoin .benefitsSection {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+            }
+
+            .MemberJoin .benefitsSection .title {
+                font-size: 34px;
+            }
+
+            .MemberJoin .benefitsSection .left,
+            .MemberJoin .benefitsSection .right {
+                padding: 50px 25px;
+            }
+        }
+
+        .MemberJoin .applySection {
+            background: white;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .MemberJoin .applySection .left {
+            -webkit-box-flex: 1;
+            flex: 1;
+        }
+
+        .MemberJoin .applySection .left>* {
+            padding-left: 80px;
+        }
+
+        .MemberJoin .applySection .left .title {
+            color: #F7103E;
+            margin-bottom: 30px;
+        }
+
+        .MemberJoin .applySection .left .description {
+            color: #28103B;
+            margin-bottom: 40px;
+        }
+
+        .MemberJoin .applySection .left .img {
+            width: 100%;
+        }
+
+        .MemberJoin .applySection .right {
+            -webkit-box-flex: 1;
+            flex: 1;
+            text-align: center;
+        }
+
+        .MemberJoin .applySection .right>* {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .MemberJoin .applySection {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .MemberJoin .applySection .left>* {
+                padding-left: 0;
+            }
+
+            .MemberJoin .applySection .left .img {
+                display: none;
+            }
+
+            .MemberJoin .applySection .right {
+                margin-top: 32px;
+            }
+
+            .MemberJoin .applySection .title {
+                font-size: 34px;
+            }
+        }
+
+        .MemberJoin .fbSection {
+            display: none;
+            background: #2e426d;
+            padding-top: 120px;
+            padding-bottom: 120px;
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: center;
+        }
+
+        .MemberJoin .fbSection .content {
+            max-width: 800px;
+            display: inline-block;
+        }
+
+        .MemberJoin .fbSection .title {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .MemberJoin .fbSection .title .icon {
+            margin-right: 16px;
+        }
+
+        .MemberJoin .fbSection .title .icon * {
+            fill: white !important;
+        }
+
+        .MemberJoin .fbSection .description {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .MemberJoin .fbSection {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                flex-direction: column;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .MemberJoin .fbSection .title {
+                font-size: 34px;
+                margin-bottom: 25px;
+            }
+
+            .MemberJoin .fbSection .title .icon {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 25px;
+            }
+
+            .MemberJoin .fbSection .description {
+                margin-bottom: 25px;
+            }
+        }
+
+        .MemberJoin .copyrightSection {
+            background: #28103B;
+            color: white;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .Button {
+            position: relative;
+            padding: 8px 16px;
+            box-sizing: border-box;
+            display: -webkit-inline-box;
+            display: inline-flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            min-width: 80px;
+            height: 40px;
+            cursor: pointer;
+            overflow: hidden;
+            font-size: 13px;
+            line-height: 20px;
+            border-radius: 10px;
+            -webkit-transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+            transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        }
+
+        .Button:hover.primary {
+            background-color: #F7103E;
+        }
+
+        .Button:active.primary {
+            background-color: #F7103E;
+        }
+
+        .Button.primary {
+            color: white;
+            background-color: #F7103E;
+            border: none;
+        }
+
+        .Button.round {
+            border-radius: 100px;
+        }
+
+        .Button .label {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-weight: 600;
+        }
+
+        .SvgIcon {
+            position: relative;
+            display: inline-block;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: currentColor;
+            fill: currentColor;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="content">
+        <div class="MemberJoin">
+            <div class="headerSection">
+                <div class="title">Strut Society</div>
+                <div class="subtitle">European Wax Center</div>
+                <a href="#apply">
+                    <div class="Button btn primary round">
+                        <div class="label">Join Now</div>
+                    </div>
+                </a>
+            </div>
+            <div class="aboutSection">
+                <div class="title">About Strut Society </div>
+                <div class="content">
+                  <div class="left">
+                    <img class="img" src="assets/ewc-images/ewc-1.jpg" />
+                  </div>
+                  <div class="right">
+                    <div class="text">
+                      <div class="subtitle">As the world-wide leading personal care brand, European Wax Center has always believed that a world full of people who feel their best—inside and out—is a beautiful thing. </div>
+                      <div class="description">As the experts in wax, we do our part by making sure every person who walks through our door leaves feeling confident—in us, in themselves, in the idea that their “best self” has been there all along.</div>
+                      <div class="description">Because when you’re the most confident version of yourself, you empower others to feel the same.</div>
+                      <div class="description">That’s why we created Strut Society—a group of people who truly embody this philosophy each and every day.</div>
+                      <div class="applyBox">
+                          <div class="title">You are cordially invited to join the Strut Society</div>
+                          <a href="#apply">
+                              <div class="Button btn primary round">
+                                  <div class="label">Apply to Join</div>
+                              </div>
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="benefitsSection">
+                <div class="left">
+                    <div class="title">What We’re Looking For </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="SvgIcon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28.844 8.862a8.126 8.126 0 00-1.778-2.587 8.291 8.291 0 00-5.825-2.369A8.346 8.346 0 0016 5.753a8.346 8.346 0 00-5.24-1.847 8.292 8.292 0 00-5.826 2.369A8.076 8.076 0 002.5 12.047c0 1.04.212 2.125.634 3.228.353.922.86 1.878 1.507 2.844 1.025 1.528 2.434 3.122 4.184 4.737 2.9 2.678 5.772 4.528 5.894 4.603l.74.475c.329.21.75.21 1.079 0l.74-.475c.122-.078 2.99-1.925 5.894-4.603 1.75-1.615 3.16-3.21 4.184-4.737.647-.966 1.156-1.922 1.506-2.844.422-1.103.635-2.188.635-3.228a7.958 7.958 0 00-.653-3.185z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <div class="header">Champions of Confidence</div>
+                            <div class="itemText">Passionate about your personal care routine</div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="SvgIcon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.493 2.747l-7.386 7.386a2.664 2.664 0 00-.774 1.88v13.32C9.333 26.8 10.533 28 12 28h12c1.067 0 2.027-.64 2.453-1.613L30.8 16.24c1.12-2.64-.813-5.573-3.68-5.573h-7.533l1.266-6.107a2.01 2.01 0 00-.546-1.827 1.984 1.984 0 00-2.814.014zM4 28c1.467 0 2.667-1.2 2.667-2.667V14.667C6.667 13.2 5.467 12 4 12a2.675 2.675 0 00-2.667 2.667v10.666C1.333 26.8 2.533 28 4 28z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <div class="header">All about social</div>
+                            <div class="itemText">You have an audience on social that you have built a relationship with and love sharing different things with them</div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="SvgIcon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28.378 11.034l-7.934-1.153-3.547-7.19a.995.995 0 00-.453-.454 1.004 1.004 0 00-1.341.454l-3.547 7.19-7.934 1.153a.998.998 0 00-.553 1.707l5.74 5.596-1.356 7.904a.999.999 0 001.45 1.053L16 23.562l7.097 3.732a.998.998 0 001.45-1.053l-1.357-7.904 5.741-5.596a.999.999 0 00.29-.572.996.996 0 00-.843-1.135z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <div class="header">Down to try new things </div>
+                            <div class="itemText">You love being adventurous and are open to trying new waxing services and products that pair well with a waxing routine! </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="SvgIcon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 30c8.836 0 16-6.268 16-14S24.836 2 16 2 0 8.268 0 16c0 3.52 1.486 6.74 3.94 9.2-.194 2.032-.834 4.26-1.542 5.932-.158.372.148.788.546.724 4.512-.74 7.194-1.876 8.36-2.468 1.532.409 3.11.614 4.696.612z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <div class="header">Empowering Others</div>
+                            <div class="itemText">You love encouraging others to feel their best inside + out
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">Potential Perks</div>
+                    <div class="description">We like to spoil our members ;)</div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="svgIcon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.633 6.647a6.093 6.093 0 00-1.334-1.94A6.219 6.219 0 0015.93 2.93 6.26 6.26 0 0012 4.315 6.26 6.26 0 008.07 2.93 6.219 6.219 0 003.7 4.706a6.057 6.057 0 00-1.825 4.33c0 .78.16 1.593.476 2.42.265.692.644 1.409 1.13 2.133.768 1.146 1.825 2.341 3.138 3.553a35.071 35.071 0 004.42 3.453l.556.356a.753.753 0 00.808 0l.556-.357a35.517 35.517 0 004.42-3.452c1.312-1.211 2.37-2.407 3.138-3.553.485-.724.867-1.441 1.13-2.133.316-.827.476-1.64.476-2.42a5.968 5.968 0 00-.49-2.39z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="itemText">Free waxing</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="svgIcon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.633 6.647a6.093 6.093 0 00-1.334-1.94A6.219 6.219 0 0015.93 2.93 6.26 6.26 0 0012 4.315 6.26 6.26 0 008.07 2.93 6.219 6.219 0 003.7 4.706a6.057 6.057 0 00-1.825 4.33c0 .78.16 1.593.476 2.42.265.692.644 1.409 1.13 2.133.768 1.146 1.825 2.341 3.138 3.553a35.071 35.071 0 004.42 3.453l.556.356a.753.753 0 00.808 0l.556-.357a35.517 35.517 0 004.42-3.452c1.312-1.211 2.37-2.407 3.138-3.553.485-.724.867-1.441 1.13-2.133.316-.827.476-1.64.476-2.42a5.968 5.968 0 00-.49-2.39z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="itemText">Quarterly PR boxes</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="svgIcon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.633 6.647a6.093 6.093 0 00-1.334-1.94A6.219 6.219 0 0015.93 2.93 6.26 6.26 0 0012 4.315 6.26 6.26 0 008.07 2.93 6.219 6.219 0 003.7 4.706a6.057 6.057 0 00-1.825 4.33c0 .78.16 1.593.476 2.42.265.692.644 1.409 1.13 2.133.768 1.146 1.825 2.341 3.138 3.553a35.071 35.071 0 004.42 3.453l.556.356a.753.753 0 00.808 0l.556-.357a35.517 35.517 0 004.42-3.452c1.312-1.211 2.37-2.407 3.138-3.553.485-.724.867-1.441 1.13-2.133.316-.827.476-1.64.476-2.42a5.968 5.968 0 00-.49-2.39z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="itemText">Product sampling</div>
+                    </div>
+                    <div class="listItem">
+                        <div class="icon">
+                            <svg class="svgIcon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.633 6.647a6.093 6.093 0 00-1.334-1.94A6.219 6.219 0 0015.93 2.93 6.26 6.26 0 0012 4.315 6.26 6.26 0 008.07 2.93 6.219 6.219 0 003.7 4.706a6.057 6.057 0 00-1.825 4.33c0 .78.16 1.593.476 2.42.265.692.644 1.409 1.13 2.133.768 1.146 1.825 2.341 3.138 3.553a35.071 35.071 0 004.42 3.453l.556.356a.753.753 0 00.808 0l.556-.357a35.517 35.517 0 004.42-3.452c1.312-1.211 2.37-2.407 3.138-3.553.485-.724.867-1.441 1.13-2.133.316-.827.476-1.64.476-2.42a5.968 5.968 0 00-.49-2.39z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="itemText">Giveaways</div>
+                    </div>
+                </div>
+            </div>
+            <div class="applySection" id="apply">
+                <div class="left">
+                    <div>
+                        <div class="title">Let's do it!</div>
+                        <div class="description">We are so excited about your interest in joining our Strut Society. A member of our team will review your application and get back to you as soon as possible.</div><img class="img"
+                            src="assets/ewc-images/ewc-4.jpg" />
+                    </div>
+                </div>
+                <div class="right">
+                    <iframe id="app_form" frameBorder="0" style="width:100%;height:650px;"></iframe>
+                </div>
+            </div>
+            <div class="fbSection">
+                <div class="content">
+                    <div class="title">
+                        <svg class="icon SvgIcon" style="width:34px;height:34px" viewBox="0 0 408.788 408.788">
+                            <path style="fill:#475993"
+                                d="M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z">
+                            </path>
+                        </svg> Join the Facebook group</div>
+                    <div class="description">Once you&#x27;re approved as an ambassador, join the private Facebook Group
+                        to get notified about new campaigns on AspireIQ before anyone else, learn about exclusive
+                        events, connect with other ambassadors, share feedback directly with the AspireIQ team, and stay
+                        up to date on industry news!</div>
+                    <div class="Button primary round">
+                        <div class="label">Join the Group</div>
+                    </div>
+                </div>
+                <div>
+                    <iframe id="app_form" frameBorder="0" style="width:100%;height:650px;"></iframe>
+                </div>
+            </div>
+            <div class="copyrightSection">© 2020 European Wax Center.</div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
+        integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
+    <script>
+        var iframe = document.getElementById("app_form");
+        var parts = window.location.pathname.split('/');
+        var lastSegment = parts.pop() || parts.pop();
+        var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
+        var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
+
+        iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);
+
+        iFrameResize({
+            log: false,
+            default: true,
+            heightCalculationMethod: 'max',
+        }, '#app_form');
+    </script>
+</body>
+
+</html>
