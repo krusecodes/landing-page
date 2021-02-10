@@ -1002,8 +1002,7 @@
               <p>
                 Let’s GO! We’re excited to have you apply. A member of our team will review your application and get
                 back to you as soon as possible, based on your response. If you have questions in the meantime, feel
-                free to email us at <a
-                  href="mailto:gosolutions-community@petcurean.com">gosolutions-community@petcurean.com</a>.
+                free to email us at <a href="mailto:community@go-solutions.com">community@go-solutions.com</a>.
               </p>
             </div>
           </div>
@@ -1047,13 +1046,12 @@
     var parts = window.location.pathname.split('/');
     var lastSegment = parts.pop() || parts.pop();
     var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
-    var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
-
-    iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);
-
+    var properties = JSON.stringify({
+      primaryColor: '#FEB812'
+    });
+    iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&properties=' + encodeURIComponent(properties));
     iFrameResize({
       log: false,
-      default: true,
       heightCalculationMethod: 'max',
     }, '#app_form');
   </script>

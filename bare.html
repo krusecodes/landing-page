@@ -1366,14 +1366,13 @@
         2020, Bare Republic. All rights reserved </div>
     </div>
   </main>
-  <script src="https://kit.fontawesome.com/9dd1dcdbe8.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"
     integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
   <script>
     var iframe = document.getElementById("app_form");
     var parts = window.location.pathname.split('/');
     var lastSegment = parts.pop() || parts.pop();
-    var NUrl = window.location.origin; // e.g. https://community.aspireiq.com
+    var baseUrl = window.location.origin; // e.g. https://community.aspireiq.com
     var redirectUrl = baseUrl + '/join/' + lastSegment + '/thankyou'; // change this to the url you want redirected to.
 
     iframe.setAttribute('src', baseUrl + '/onboarding_form/' + lastSegment + window.location.search + '&redirectUri=' + redirectUrl);

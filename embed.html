@@ -23,7 +23,10 @@
         integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
     <script>
         var iframe = document.getElementById("app_form");
-        var src = 'https://community.aspireiq.com/onboarding_form/EyeBuyIcons?clientId=iZP4nkngkeQfga8lXgJU6BOrOyR2wiop&properties={optional json to customize colors}&' + window.location.search.slice(1);
+        var properties = JSON.stringify({
+            primaryColor: '#ffffff'
+        });
+        var src = 'https://community.aspireiq.com/onboarding_form/The%20Rose%20Hanger%20Ambassadors?clientId=ySSC9yufY5YwSrh3qjLslK3g6tyTM3yU&properties=' + encodeURIComponent(properties) + window.location.search.slice(1)
 
 
         iframe.setAttribute('src', src);
@@ -33,9 +36,6 @@
         }, '#app_form');
     </script>
     <!-- If you decide to customize the color of your form, below are the Json details -->
-    <!-- var properties = JSON.stringify({
-           primaryColor: '#000000'
-         }); -->
 
     <!-- I you decide to add properties to the src url, the form should look like this: + '&properties=' + encodeURIComponent(properties)           -->
 </body>
